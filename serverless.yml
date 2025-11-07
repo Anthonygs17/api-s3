@@ -45,3 +45,11 @@ functions:
           method: post
           cors: true
           integration: lambda
+  crear_archivo_objeto_bucket:
+    handler: crear_archivo_objeto_bucket.lambda_handler
+    events:
+      - http:
+          path: /s3/bucket/objeto/subir-archivo
+          method: post
+          cors: true
+          integration: lambda
