@@ -37,3 +37,11 @@ functions:
           method: post
           cors: true
           integration: lambda
+  crear_objeto_bucket:
+    handler: crear_objeto_bucket.lambda_handler
+    events:
+      - http:
+          path: /s3/bucket/crear-objeto
+          method: post
+          cors: true
+          integration: lambda
